@@ -1,37 +1,23 @@
-
-using System;
-using System.Linq;
-
 class Program
 {
     public static void Main()
     {
-    	int [] numero1 = new int[5];
-    	int [] numero2 = new int[5];
-    	int [] soma = new int[5] 
-    		
-    		for (int i = 0; i > 5; i++)
-    	{
-        Console.Write("Quantos números você deseja inserir? ");
-        numero[i] Convert.ToInt32(Console.ReadLine());
-        
-            Console.Write("Quantos números você deseja inserir? ");
-        int quantidade = Convert.ToInt32(Console.ReadLine())
+        int[] numero1 = new int[5];
+        int[] numero2 = new int[5];
+        int[] soma = new int[5];
 
-
-        for (int i = 0; i < quantidade; i++)
+        for (int i = 0; i < 5; i++)
         {
-            Console.Write("Digite um número inteiro: ");
-            int numero = Convert.ToInt32(Console.ReadLine());
+            Console.Write($"Insira o {i + 1}º número do primeiro conjunto: ");
+            numero1[i] = int.Parse(Console.ReadLine());
 
-            // Verifica se o número atual é maior que o maior número encontrado até agora
-            if (numero > maiorNumero)
-            {
-                maiorNumero = numero;
-            }
+            Console.Write($"Insira o {i + 1}º número do segundo conjunto: ");
+            numero2[i] = int.Parse(Console.ReadLine());
+
+            soma[i] = numero1[i] + numero2[i];
         }
 
-        Console.WriteLine("O maior número inserido foi: " + maiorNumero);
+        Console.WriteLine("A soma dos vetores é: " + string.Join(", ", soma));
         Console.ReadKey();
     }
 }
